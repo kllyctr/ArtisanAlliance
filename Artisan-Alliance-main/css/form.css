@@ -1,0 +1,510 @@
+@font-face{ /* Importing custom font */
+    font-family:"Maragsa";
+    src: url(font/Maragsâ-Display.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Maragsa';
+    src: url('../font/Maragsâ-Display.otf') format('opentype');
+  }
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+:root{ /* kinda like creating your own color palette, and also custom font-size and stuff- universal / global variables*/
+    --bg-color: #fff;
+    --text-color: #221314;
+    --primary-color: #c3b091;
+    --secondary-color: #f7e7ce;
+    --big-font: 4rem;
+    --h2-font: 2.5rem;
+    --p-font: 1.1rem;
+}
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);  
+}
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 30px 12%; /* Padding space for both left and right - 12%, top 30px */
+    transition: ease .40s;
+}
+
+.logo{ /* text styling, not really a logo */
+    font-family:"Maragsa";
+    font-size: 35px;
+    font-weight: 599; /* apparently may problema yung letter "n" pag nka set ung value nya to 600 or bold*/
+    letter-spacing: 1px;
+    color: var(--bg-color);
+}
+.navbar{
+    display: flex;
+}
+.navbar a{
+    color: var(--bg-color);
+    font-size: var(--p-font);
+    font-weight: 500;
+    padding: 10px 22px;
+    border-radius: 4px;
+    transition: ease .40s;
+}
+.navbar a:hover{
+    background: var(--bg-color);
+    color: var(--text-color);
+    box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
+    border-radius: 4px;
+}
+
+/* Dropdown Button and Links */
+.dropbtn{
+    padding: 1rem;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+}
+.dropbtn:hover, .dropbtn:focus{ /* Dropdown button on hover & focus */
+    background-color: var(--primary-color);
+}
+.dropdown{ /* The container <div> - needed to position the dropdown content */
+    position: relative;
+    display: inline-block;
+}  
+.dropdown-content{ /* Is hidden by default */
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+.dropdown-content a{
+    padding: 1rem 1rem;
+    display: block;
+}
+.dropdown-content a:hover{ /* Change color of dropdown links on hover */
+    background-color: var(--bg-color);
+}
+.dropdown:hover .dropdown-content{ /* Shows the dropdown menu on hover */
+    display: block;
+    padding-top: 1rem;
+} 
+.dropdown:hover .dropbtn{ /* Background color and text color of the dropdown button changes when the dropdown content is hovered or shown */
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Sticky Header */
+header .sticky{
+    background: var(--bg-color);
+    padding: 10px 12%;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+}
+.sticky .logo{
+    color: var(--text-color);
+}
+.sticky .navbar a{
+    color: var(--text-color);
+    /* transition: ease-in-out 0.4s */;
+}
+.sticky #menu-icon{
+    color: var(--text-color);
+}
+
+/* Hamburger - For mobile navigation */
+#menu-icon{
+    color: var(--bg-color);
+    font-size: 2.1875rem;
+    z-index: 9999;
+    cursor: pointer;
+    display: none;
+}
+
+section{
+    padding: 5rem 12%;
+}
+
+/* Intro */
+.home{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(bg1.jpg);
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+}
+.home-text h1{
+    font-size: var(--big-font);
+    font-weight: 599;
+    line-height: 1.0;
+    color: var(--text-color);
+    font-family:"Maragsa";
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-shadow: 2px 3px 5px #9b9a9a;
+}
+.home-text p{
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 38px;
+    margin-bottom: 40px;
+    text-shadow: 2px 3px 5px #3e3e3e;
+}
+.home-btn{
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 15px 30px;
+    background: var(--primary-color);
+    color: var(--text-color);
+    border-radius: 4px;
+    box-shadow: 3px 6px 6px #888888;
+    transition: ease-in .30s;
+}
+.home-btn:hover{
+    background: var(--bg-color);
+    transform: scale(1.1);
+}
+
+/* Sticky Header */
+header .sticky{
+    background: var(--bg-color);
+    padding: 10px 12%;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+}
+.sticky .logo{
+    color: var(--text-color);
+}
+.sticky .navbar a{
+    color: var(--text-color);
+    /* transition: ease-in-out 0.4s */;
+}
+.sticky #menu-icon{
+    color: var(--text-color);
+}
+
+
+.row-items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.form
+{
+    width: 100%;
+    height: 600px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: relative;
+    margin-top:50px;
+}
+
+.form1
+{
+    height: 500px;
+    width:80%;
+    max-width:400px;
+    color: #ffffff;
+    text-align:left;
+    padding: 20px;
+    border: 1px solid rgba(255,255,255,0.5);
+    background: rgba(255, 204, 86, 0.1);
+    border-radius:5px;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+    backdrop-filter:blur(2px);
+    margin:10px;
+}
+
+.email,
+.subject,
+.responsive
+{
+    height: 50px;
+    width: 250px;
+    border: 1px solid rgba(255,255,255,0.3);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius:5px;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+    backdrop-filter:blur(2px);
+    margin:10px;
+    color:rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight:200;
+}
+
+.message
+{
+    height: 250px;
+    width: 250px;
+    border: 1px solid rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.1);
+    border-radius:5px;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+    backdrop-filter:blur(2px);
+    margin:10px;
+    color:rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight:200;
+}
+
+.message:hover
+{
+    border: 1px solid rgba(255,255,255,0.3);
+    background: rgba(255, 255, 255, 0.5);
+    color:rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight:200;
+    border-radius:5px;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+    backdrop-filter:blur(2px);
+    margin:10px;
+}
+
+
+.email:hover,
+.subject:hover,
+.responsive:hover
+{
+    color:#221314;
+    border: 1px solid rgba(255,255,255,0.3);
+    background: rgba(223, 255, 255, 0.5);
+    border-radius:5px;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+    backdrop-filter:blur(2px);
+    margin:10px;
+}
+
+.responsive
+{
+    color:#d2d2d2;
+    font-weight: 600;
+}
+
+.back-video{
+    position:absolute;
+    right:0;
+    bottom:0;
+    z-index:-1;
+}
+
+@media(min-aspect-ratio: 16/9){
+    .back-video{
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Footer Content & Newsletter - replace all old Footers with this code */
+.newsletter{
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    text-align: center;
+    padding: 2.5% 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.newsletter p{
+    margin: 0;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.newsletter i{
+    margin-right: 10px;
+    font-size: 18px;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.col-md-6 {
+    width: 50%;
+    margin-bottom: 20px;
+}
+h3{
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+form{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+}
+input[type="email"]{
+    width: 100%;
+    padding: 0.6rem;
+    border-radius: 5px 0 0 5px;
+    border: none;
+    font-size: 16px;
+}
+button[type="submit"]{
+    padding: 0.6rem 20px;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+button[type="submit"]:hover{
+    background-color: coral;
+    color: var(--text-color);
+}
+
+/* Media Queries */
+/* Screens with 1200px max width: */
+@media (max-width: 1200px) {
+    header{
+        padding: 1rem 3%;
+        transition: .2s;
+    }
+    header.sticky{
+        padding: 0.75rem 3%;
+        transition: .2s;
+    }
+    section{
+        padding: 4.75rem 3%;
+        transition: .2s;
+    }
+    :root{
+        --big-font: 3.25rem;
+        --h2-font: 1.875rem;
+        --p-font: 1rem;
+    }
+    .image-slider{
+        width: 800px;
+        height: 550px;
+    }
+    .image-slider .slide .info{
+        padding: 10px 25px;
+    }
+    .image-slider .slide .info h2{
+        font-size: 32px;
+        font-weight: 700;
+    }
+    .image-slider .slide .info p{
+        font-size: 0.90rem;
+        width: 70%;
+    }
+    .image-slider .navigation{
+        bottom: 25px;
+    }
+    .image-slider .navigation .navigation-btn{
+        width: 10px;
+        height: 10px;
+        margin: 8px;
+    }
+}
+
+/* Toggles hamburger menu with screens 700px max width: */
+@media (max-width: 700px) {
+    #menu-icon{
+        display: block;
+    }
+    .stick #menu-icon{
+        color: var(--text-color);
+    }
+    .home{
+        height: 88vh;
+    }
+    .navbar{
+        position: absolute;
+        top: 0;
+        right: -100%;
+        width: 270px;
+        height: 120vh;
+        background: var(--primary-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 2rem;
+        transition: 0.5s all;
+    }
+    .navbar a{
+        display: block;
+        position: static;
+        margin: 0.9rem 0; 
+    }
+    .navbar li{
+        display: inline-block;
+    }
+    .navbar .dropdown{
+        float: none;
+    }
+    .navbar .dropdown-content{
+        position: relative;
+    }
+    .navbar .dropdown .dropbtn{
+        display: block;
+        width: 100%;
+    }
+    .navbar .dropdown:hover .dropdown-content{
+        padding: 0.1rem;
+        text-align: center;
+    } 
+    .sticky .navbar a{
+        color: var(--bg-color);
+    }
+    .navbar a:hover{
+        color: var(--text-color);
+    }
+    .open{
+        right: 0;
+    }
+}
+
+/* Screens with 600px max width: */
+@media (max-width: 600px){
+    :root{
+        --big-font: 2.5rem;
+        --h2-font: 1.325rem;
+        --p-font: 1rem;
+        transition: 2s;
+    }
+    .image-slider{
+        width: 600px;
+        height: 375px;
+    }
+    .image-slider .slide .info{
+        padding: 10px 18px;
+    }
+    .image-slider .slide .info h2{
+        font-size: 25px;
+    }
+    .image-slider .slide .info p{
+        font-size: 0.65rem;
+        width: 75%;
+    }
+    .image-slider .navigation{
+        bottom: 15px;
+    }
+    .image-slider .navigation .navigation-btn{
+        width: 8px;
+        height: 8px;
+        margin: 6px;
+    }
+}

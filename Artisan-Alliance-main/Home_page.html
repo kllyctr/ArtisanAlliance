@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artisan Alliance | Home</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"> <!-- hamburger icon -->
+    <link rel="stylesheet" href="css/style.css"> <!-- CSS import -->
+
+     <!-- Barlow Font import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <a href="#home"class="logo">Homepage</a>
+        <div class="bx bx-menu" id="menu-icon"></div> <!-- Icon in css: @media -->
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li class="dropdown">
+                <a href="#slider" class="dropbtn">Artists</a>
+                <div class="dropdown-content">
+                    <a href="Ang_KiuKiok.html">Ang Kiukok</a>
+                    <a href="Ernest_Concepcion.html">Ernest Concepcion</a>
+                    <a href="Ronson_Culibrina.html">Ronson Culibrina</a>
+                </div>
+            </li>
+            <li class="push-down"><a href="aboutus.html">About Us</a></li>
+            <li class="push-down"><a href="form.html">Contact Us</a></li>
+        </ul>
+    </header>
+
+    <!-- Intro -->
+    <section class="home" id="home">
+        <div class="home-text">
+            <h1>Philippines and Art</h1>
+            <p>Contemporary and modern art in the Philippines has a rich history and diverse range of styles and mediums.<br>
+            In the 1970s and 80s, a new generation of artists emerged, known as the Philippine Neo-Realists, who addressed social and political issues through their work. Today, Filipino artists continue to explore a wide variety of themes and mediums, from painting and sculpture to new media and installation art.
+            In the early 20th century, artists such as Fernando Amorsolo and Victorio Edades helped establish a distinct Filipino art style that combined traditional techniques with modernist influences.
+            Contemporary and Modern art in the Philippines today continues to reflect the country's diverse cultural heritage and its place in the global art world.</p>
+            <a href="#slider" class="home-btn">View Artists</a> <!-- Descripion by Bryan -->
+        </div>
+    </section>
+
+    <!-- Artists: Image Slider -->
+    <div class="slider" id="slider">
+        <div class="slide active">
+            <img src="assets/Ang Kiukok Artist.jpeg" alt="Ang Kiukok">
+            <div class="slide-text">
+                <h2>Ang Kiukok</h2>
+                <p>Ang Kiukok was a Filipino painter known for his expressive, Cubist-like works.<br>
+                    He often chose dynamic or disturbing subject matter, frequently depicting rabid dogs, crucifixions, and screaming figures in an abstracted geometric style.<br>
+                    When asked why he often chose subjects full of such angry he once replied "Why not? Open your eyes. Look around you. So much anger, sorrow, ugliness. And also madness." <br>
+                    (c) artnet.com</p>
+                <a href="Ang_KiuKiok.html" class="button">View Artist</a>
+            </div>
+        </div>
+
+        <div class="slide">
+            <img src="assets/ernest.jpg" alt="Ernest Concepcion">
+            <div class="slide-text">
+                <h2>Ernest Concepcion</h2>
+                <p>Ernest Concepcion (b. 1977) is a Filipino painter based in Manila, Philippines, who combines the motif of classical landscape with contemporary caricatures and representations that take one into the framework of warfare while uncovering the effects of a larger 20th-Century, Postwar existence.</p>
+                <p>(c) https://ernestconcepcion.com/bio/</p>
+                <a href="Ernest_Concepcion.html" class="button">View Artist</a>
+            </div>
+        </div>
+
+        <div class="slide">
+            <img src="assets/ronson.jpg" alt="Ronson Culibrina">
+            <div class="slide-text">
+                <h2>Ronson Culibrina</h2>
+                <p>Ronson Culibrina is a contemporary Filipino artist recognised for his appropriation paintings that reference works by prominent Filipino and international artists. In his oil paintings, which often juxtapose garish psychedelic colours with more subdued tones, Culibrina addresses current socio-political concerns such as power dynamics in art history, globalisation, and human interventions in nature.</p>
+                <p>(c) https://ocula.com/artists/ronson-culibrina/</p>
+                <a href="Ronson_Culibrina.html" class="button">View Artist</a>
+            </div>
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </div>
+
+
+    <!-- Container "Gallery" -->
+    <section class="container" id="container">
+        <div class="text">
+            <h2>Contemporary Art<br>Gallery</h2>
+        </div>
+
+        <div class="row-items">
+            <div class="container-box">
+                <a href="Ang_KiuKiok.html" target="_blank">
+                <div class="container-img">
+                    <img src="assets/ang1.jpg" alt="Artwork 1" style="width: 400px; height: auto;">
+                    <div class="arttitle">
+                        <h4>Fishermen</h4>
+                        <p>by Ang Kiu Kiok</p>
+                        </div>
+                </div>
+                </a>      
+            </div>
+
+            <div class="container-box">
+                <a href="Ernest_Concepcion.html" target="_blank">
+                <div class="container-img">
+                    
+                    <img src="assets/3_ernest.jpg" alt="Artwork 2" style="width: 400px; height: auto;">
+                    <div class="arttitle">
+                        <h4>Dungeon Crawl</h4>
+                        <p>by Ernest Concepcion</p>
+                    </div>
+                </div>
+                </a>
+            </div>
+
+            <div class="container-box">
+                <a href="Ronson_Culibrina.html" target="_blank">
+                <div class="container-img">
+        
+                    <img src="assets/Artwork 3.jpg" alt="Artwork 3" style="width: 400px; height: auto;">
+                    <div class="arttitle">
+                        <h4>Redtide</h4>
+                        <p>by Ronson Culibrina</p>
+                    </div>
+                </div>  
+                </a>         
+            </div>
+
+            <div class="container-box">
+                <a href="Ernest_Concepcion.html" target="_blank">
+                <div class="container-img">
+                    <img src="assets/4.png" alt="Artwork 4" style="width: 400px; height: auto;">
+                    <div class="arttitle">
+                        <h4>Wrong Room</h4>
+                    <p>by Ernest Concenpcion</p>
+                    </div>
+                </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Subscribe to Our Newsletter</h3>
+                    <p>Stay updated on the latest news on Filipino Artists.</p>
+                    <form>
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button> <!-- No function -->
+                    </form>
+                </div>
+            </div>
+            <p> <br> Made with &#10084 by the Artisan Alliance Team.
+            All resources are used for educational purposes only. </p>
+        </div>
+      </section>
+
+    <!-- JavaScript image slider and file import -->
+    <script type="text/javascript" src="javascript/script.js"></script>
+</body>
+</html>
